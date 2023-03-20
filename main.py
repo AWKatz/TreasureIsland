@@ -42,10 +42,8 @@ if path == "left":
             print("You opened the blue door and were swarmed and eaten by ghouls...Game Over")
         else:
             print("You tied to use the last of your mana to cast a spell to reveal a new door, but in doing so you collapsed space and time...Game Over")
-
     else:
         print("You tried to swim across, but were devoured by hungry piranha...Game Over.")
-
 else:
     print("You went to the right and fell into a hole that a hunter had dug to trap the weary...Game Over.")
 
