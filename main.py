@@ -27,22 +27,28 @@ print("Your mission is to find the treasure.")
 
 #https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
 
-path = input("The path you've followed ends at a crossroad, do you go left or right? ")
+path = input('The path you\'ve followed ends at a crossroad, do you go "left" or "right"?\n').lower()
+
 if path == "left":
-    path = input("You took the path to the left and came to a small lake. Do you swim across or walk around it? ")
+    path = input('You took the path to the left and came to a small lake. Do you "swim" across or "walk" around it?\n').lower()
+
+    if path == "walk":
+        path = input('You walked around the lake, a shack is on its far shore. Inside are 3 doors: "red", "blue" or "yellow".\n').lower()
+        if path == "yellow":
+            print("You found the treasure! You Win!")
+        elif path == "red":
+            print("You opened the red door, triggering a trap that casts fireball...Game Over")
+        elif path == "blue":
+            print("You opened the blue door and were swarmed and eaten by ghouls...Game Over")
+        else:
+            print("You tied to use the last of your mana to cast a spell to reveal a new door, but in doing so you collapsed space and time...Game Over")
+
+    else:
+        print("You tried to swim across, but were devoured by hungry piranha...Game Over.")
+
 else:
     print("You went to the right and fell into a hole that a hunter had dug to trap the weary...Game Over.")
 
-if path == "walk":
-    path = input("You walked around the lake, a shack is on its far shore. Inside are 3 doors: red, blue or yellow. ")
-    if path == "yellow":
-        print("You found the treasure! You Win!")
-    elif path == "red":
-        print("You opened the red door, triggering a trap that casts fireball...Game Over")
-    else:
-        print("You opened the blue door were eaten by ghouls...Game Over")
-else:
-    print("You tried to swim across, but were devoured by hungry piranha...Game Over.")
 
 
 
